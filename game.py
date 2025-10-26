@@ -10,12 +10,11 @@ def roll_two_d6() -> int:
 
 
 
-def tie_breaker(*roller):
-    player_a,player_b=0,0
-    while player_a== player_b:
-        player_a=roll_two_d6()
-        player_b=roll_two_d6()
-    if player_a>player_b:
+def tie_breaker(players):
+    while 'player_a'== 'player_b':
+        players['player_a']=roll_two_d6()
+        players['player_b'] = roll_two_d6()
+    if 'player_a'>'player_b':
         return "player_a"
     return "player_b"
 
